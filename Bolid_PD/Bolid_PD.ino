@@ -540,13 +540,10 @@ unsigned int read_position(void) {
   }
   else {
     if (on_line > 2) {
-      tmp_value = sensor_values[0] + sensor_values[1];
-      if (  tmp_value > 90 )
+      if ((sensor_values[0] >70) && (sensor_values[SENSORS_NR-1] < LINE_TRESHOLD) )
         last_pos = 100;
-      tmp_value = sensor_values[SENSORS_NR-2] + sensor_values[SENSORS_NR-1];
-      if  ( tmp_value > 90 )
+      if ( ( sensor_values[SENSORS_NR-1] >70) && (sensor_values[0] < LINE_TRESHOLD ) )
         last_pos = (SENSORS_NR * 100);
-
     } else
       last_pos = pos / sensors_sum;
   }
