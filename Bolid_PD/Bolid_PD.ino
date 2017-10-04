@@ -59,8 +59,8 @@ const unsigned int sensors[SENSORS_NR] = { A7, A6, A5, A4, A3, A2 };  //left-rig
 
 
  //----------------  35mm Wheels / 0.36 / 6 / 115 / ---------------
-#define LINE_TRESHOLD   40    // Ниво под което се смята че няма линия под сензора
-#define SENSOR_TRESHOLD 5    // Филтриране на шумове от сензорите
+#define LINE_TRESHOLD   30    // Ниво под което се смята че няма линия под сензора
+#define SENSOR_TRESHOLD 2    // Филтриране на шумове от сензорите
 
 //------------------  1000 rpm -------------
 #define KP             0.25
@@ -72,13 +72,13 @@ const unsigned int sensors[SENSORS_NR] = { A7, A6, A5, A4, A3, A2 };  //left-rig
 #define SLOW_SPEED     MAX_SPEED - MAX_SPEED/4  // Стабилизирне след завръщане на линията
 #define BREAK_LEVEL  MAX_SPEED * 0.3
 //#define BREAK_LEVEL     25
-#define BREAK_SPEED      0
+#define BREAK_SPEED      -16
 
 //  Скорости на моторите при изпуснат завой - търсене на линията в ляво или дясно
 // Two speed for turn - for making right turn radius
 
 #define TURN_SPEED_HIGH     MAX_SPEED + MAX_SPEED/10
-#define TURN_SPEED_LOW      -8
+#define TURN_SPEED_LOW      -10
 
 // Лява и дясна позиция, след които се изпуска линията
 #define TURN_ERROR_LEFT    100    //  100 minimum
@@ -88,8 +88,8 @@ const unsigned int sensors[SENSORS_NR] = { A7, A6, A5, A4, A3, A2 };  //left-rig
 
  /*
  //----------------  40mm Wheels ---------------
-#define LINE_TRESHOLD   40    // Ниво под което се смята че няма линия под сензора
-#define SENSOR_TRESHOLD 5    // Филтриране на шумове от сензорите
+#define LINE_TRESHOLD   30    // Ниво под което се смята че няма линия под сензора
+#define SENSOR_TRESHOLD 2    // Филтриране на шумове от сензорите
 
 //------------------  1000 rpm -------------
 #define KP             0.32
@@ -100,7 +100,7 @@ const unsigned int sensors[SENSORS_NR] = { A7, A6, A5, A4, A3, A2 };  //left-rig
 //---------------
 #define SLOW_SPEED     MAX_SPEED - MAX_SPEED/10  // Стабилизирне след завръщане на линията
 #define BREAK_LEVEL    MAX_SPEED * 0.4
-#define BREAK_SPEED     -16
+#define BREAK_SPEED     -24
 
 //  Скорости на моторите при изпуснат завой - търсене на линията в ляво или дясно
 // Two speed for turn - for making right turn radius
